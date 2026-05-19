@@ -1,0 +1,18 @@
+{
+    "lookback": 6,
+    "dynamic_features": [
+        "Total_CO2e_Scaled",
+        "Capacity_Scaled",
+        "Is_Zero_Reported"
+    ],
+    "static_features": [
+        "State_Id",
+        "Industry Type (sectors)_Id",
+        "Unit Type_Id",
+        "Primary NAICS Code_Id"
+    ],
+    "scaler_features_order": [
+        "Unit Maximum Rated Heat Input Capacity (mmBTU/hr)_YeoJohnson",
+        "Total_CO2e_YeoJohnson"
+    ]
+}
