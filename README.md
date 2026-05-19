@@ -1,8 +1,5 @@
  Deep Learning-Based Modeling and Forecasting of Greenhouse Gas Emissions
 
-Department of Data Science, College of Computing — Debre Berhan University
-Group 4 | Submitted to: Baye Y, PhD
-
  What This Project Is About
 
 We built deep learning models to forecast industrial greenhouse gas emissions over time. The idea came from a real gap: Ethiopia is industrializing fast, but there are no reliable tools or facility-level datasets to predict how much GHG those industries will emit. We trained our models on U.S. EPA data (2011–2023) because it's detailed and well-structured, then designed the system so it can work with local Ethiopian data too.
