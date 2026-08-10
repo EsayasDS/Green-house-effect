@@ -1,7 +1,6 @@
  Deep Learning-Based Modeling and Forecasting of Greenhouse Gas Emissions
 
  What This Project Is About
-
 We built deep learning models to forecast industrial greenhouse gas emissions over time. The idea came from a real gap: Ethiopia is industrializing fast, but there are no reliable tools or facility-level datasets to predict how much GHG those industries will emit. We trained our models on U.S. EPA data (2011–2023) because it's detailed and well-structured, then designed the system so it can work with local Ethiopian data too.
 
 Out of the three models we tried — LSTM, GRU, and a hybrid of both — the GRU came out on top with an R² of about 0.94. We also built a simple prototype where anyone can upload a CSV file with emission records and get a forecast for the next year.
