@@ -1,8 +1,8 @@
- Deep Learning-Based Modeling and Forecasting of Greenhouse Gas Emissions
+# Deep Learning-Based Modeling and Forecasting of Greenhouse Gas Emissions
 
 Deep learning models for forecasting industrial greenhouse gas emissions using facility-level data from the U.S. EPA Greenhouse Gas Reporting Program (GHGRP), with a pipeline designed for future adaptation to Ethiopian industrial data.
 
- Overview
+## Overview
 
 Ethiopia is rapidly industrializing, but facility-level greenhouse gas emissions data and forecasting tools remain limited. This project investigates whether deep learning can forecast industrial emissions using the detailed U.S. EPA GHGRP dataset as a foundation for a future Ethiopian application.
 
