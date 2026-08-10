@@ -64,28 +64,30 @@ A Diebold-Mariano test indicated a statistically significant difference between 
 
 ## Repository Structure
 
+
 ```text
 Green-house-effect/
-├── README.md
-├── LICENSE
-├── requirements.txt
-├── docs/
-│   └── paper.pdf
-├── notebooks/
-│   └── training.ipynb
-├── src/
-│   └── predict.py
-├── models/
-│   ├── GRU_Best.keras
-│   ├── LSTM_best.keras
-│   └── HYBRID_model.keras
-├── artifacts/
+├── Artifact/
 │   ├── feature_config.json
 │   ├── minmax_scaler.joblib
 │   ├── vocabularies.json
 │   └── yeojohnson_lambdas.json
-└── data/
-    └── sequence_data.npz
+│
+├── Code/
+│   ├── Deep final.ipynb
+│   └── predict_ghg_input_corrected_again_with backpadding.py
+│
+├── Emssion models/
+│   ├── GRU_Best.keras
+│   ├── HYBRID_model.keras
+│   └── LSTM_best.keras
+│
+├── Sequence/
+│   └── sequence_data (1).npz
+│
+├── .gitignore
+├── Deep paper.pdf
+└── README.md
 ```
 
 ## Getting Started
