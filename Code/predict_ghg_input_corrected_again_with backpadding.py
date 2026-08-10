@@ -7,10 +7,10 @@ import os
 import tkinter as tk
 from tkinter import filedialog
 
-# --- 1. CONFIGURATION & PATHS ---
-ARTIFACT_DIR = r"C:\Users\dagma\Downloads\Emssion project\Artifact"
-MODEL_DIR = r"C:\Users\dagma\Downloads\Emssion project\Emssion models"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+ARTIFACT_DIR = os.path.join(BASE_DIR, "Artifact")
+MODEL_DIR = os.path.join(BASE_DIR, "Emssion models")
 PATHS = {
     "model": os.path.join(MODEL_DIR, "GRU_Best.keras"),
     "scaler": os.path.join(ARTIFACT_DIR, "minmax_scaler.joblib"),
