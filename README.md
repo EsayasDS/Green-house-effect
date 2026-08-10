@@ -4,7 +4,7 @@ Deep learning models for forecasting industrial greenhouse gas emissions using f
 
 ## Overview
 
-Ethiopia is rapidly industrializing, but facility-level greenhouse gas emissions data and forecasting tools remain limited. This project investigates whether deep learning can forecast industrial emissions using the detailed U.S. EPA GHGRP dataset as a foundation for a future Ethiopian application.
+Ethiopia is rapidly industrializing, but facility-level greenhouse gas emissions data and forecasting tools remain limited. This project investigates whether deep learning can forecast industrial emissions using the detailed U.S. EPA GHGRP dataset as a foundation for future adaptation to Ethiopian facility-level data.
 
 Three models were developed and compared:
 
@@ -26,7 +26,7 @@ The dataset contains facility, industry, unit, capacity, and emissions informati
 * Unit type and heat-input capacity
 * CO₂, CH₄, N₂O, and biogenic CO₂
 
-The target variable, **Total CO₂e**, combines reported greenhouse gases using:
+The target variable, **Total CO₂e**, combines the reported greenhouse gases using:
 
 ```text
 Total CO₂e = CO₂ + Biogenic CO₂ + 25 × CH₄ + 298 × N₂O
@@ -34,7 +34,7 @@ Total CO₂e = CO₂ + Biogenic CO₂ + 25 × CH₄ + 298 × N₂O
 
 ## Methodology
 
-The pipeline includes:
+The forecasting pipeline includes:
 
 1. Data cleaning and missing-value handling
 2. Feature engineering
@@ -48,7 +48,7 @@ The pipeline includes:
 
 The models use separate branches for **dynamic time-series features** and **static facility characteristics**, which are combined before the final prediction layer.
 
-For detailed preprocessing, architecture, experiments, and statistical analysis, see the full research paper.
+For detailed preprocessing, model architectures, experiments, and statistical analysis, see the full research paper.
 
 ## Results
 
@@ -58,9 +58,9 @@ For detailed preprocessing, architecture, experiments, and statistical analysis,
 | LSTM            |     0.0280 |     0.0524 |     0.9322 |     30,705 |
 | Hybrid LSTM-GRU |     0.0525 |     0.0670 |     0.8892 |     55,697 |
 
-The **GRU model performed best**, achieving the highest R² and lowest MAE/RMSE while using the fewest parameters.
+The **GRU model performed best**, achieving the highest R² and lowest MAE and RMSE while using the fewest parameters.
 
-A Diebold-Mariano test also indicated a statistically significant difference between the GRU and LSTM forecasts (**p < 0.05**).
+A Diebold-Mariano test indicated a statistically significant difference between the GRU and LSTM forecasts (**p < 0.05**).
 
 ## Repository Structure
 
@@ -100,13 +100,15 @@ Green-house-effect/
 * joblib
 * pyxlsb
 
-Install dependencies:
+Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
 ### Run a Forecast
+
+Run the prediction script:
 
 ```bash
 python src/predict.py
@@ -115,15 +117,15 @@ python src/predict.py
 The prediction pipeline:
 
 1. Loads the trained GRU model.
-2. Loads the preprocessing artifacts.
-3. Accepts a facility-level CSV file.
+2. Loads the saved preprocessing artifacts.
+3. Prompts for a facility-level CSV file.
 4. Applies the same preprocessing used during training.
-5. Handles histories shorter than six years through padding.
+5. Handles histories shorter than six years using back-padding.
 6. Produces a next-year CO₂e forecast.
 
 ## Future Work
 
-* Retrain the model using Ethiopian facility-level emissions data when available.
+* Retrain and validate the models using Ethiopian facility-level emissions data when such data becomes available.
 * Incorporate additional economic and industrial variables.
 * Improve forecasting of extreme emission events.
 * Develop a web-based interface for researchers, industries, and environmental agencies.
